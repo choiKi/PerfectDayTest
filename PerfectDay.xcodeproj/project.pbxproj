@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		824B5FF5EFB80BCFE241117B /* Pods_PerfectDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37BDEB1325EA14C237C54CB4 /* Pods_PerfectDay.framework */; };
+		C4333158282D412400B85424 /* CalendarView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4333157282D412400B85424 /* CalendarView.storyboard */; };
+		C433315C282D42CB00B85424 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433315B282D42CB00B85424 /* CalendarVC.swift */; };
 		D49E1AD7281FD0D3004EE08F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E1AD6281FD0D3004EE08F /* AppDelegate.swift */; };
 		D49E1AD9281FD0D3004EE08F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E1AD8281FD0D3004EE08F /* SceneDelegate.swift */; };
 		D49E1ADB281FD0D3004EE08F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E1ADA281FD0D3004EE08F /* ViewController.swift */; };
@@ -17,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01AA816EBB8B49FEDF5A474D /* Pods-PerfectDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerfectDay.release.xcconfig"; path = "Target Support Files/Pods-PerfectDay/Pods-PerfectDay.release.xcconfig"; sourceTree = "<group>"; };
+		37BDEB1325EA14C237C54CB4 /* Pods_PerfectDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PerfectDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2314E0A08293A8BA01C4B8B /* Pods-PerfectDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerfectDay.debug.xcconfig"; path = "Target Support Files/Pods-PerfectDay/Pods-PerfectDay.debug.xcconfig"; sourceTree = "<group>"; };
+		C4333157282D412400B85424 /* CalendarView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarView.storyboard; sourceTree = "<group>"; };
+		C433315B282D42CB00B85424 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		D49E1AD3281FD0D3004EE08F /* PerfectDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49E1AD6281FD0D3004EE08F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D49E1AD8281FD0D3004EE08F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824B5FF5EFB80BCFE241117B /* Pods_PerfectDay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47E60E4CF7F36BBE53E24417 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37BDEB1325EA14C237C54CB4 /* Pods_PerfectDay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F79AB90B6832C81B8749213 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2314E0A08293A8BA01C4B8B /* Pods-PerfectDay.debug.xcconfig */,
+				01AA816EBB8B49FEDF5A474D /* Pods-PerfectDay.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D49E1ACA281FD0D3004EE08F = {
 			isa = PBXGroup;
 			children = (
 				D49E1AD5281FD0D3004EE08F /* PerfectDay */,
 				D49E1AD4281FD0D3004EE08F /* Products */,
+				7F79AB90B6832C81B8749213 /* Pods */,
+				47E60E4CF7F36BBE53E24417 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +94,8 @@
 				D49E1AE4281FD0D5004EE08F /* LaunchScreen.storyboard */,
 				D49E1AE7281FD0D5004EE08F /* Info.plist */,
 				D49E1ADF281FD0D3004EE08F /* PerfectDay.xcdatamodeld */,
+				C4333157282D412400B85424 /* CalendarView.storyboard */,
+				C433315B282D42CB00B85424 /* CalendarVC.swift */,
 			);
 			path = PerfectDay;
 			sourceTree = "<group>";
@@ -77,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D49E1AEA281FD0D5004EE08F /* Build configuration list for PBXNativeTarget "PerfectDay" */;
 			buildPhases = (
+				558B53966E653725E91D7AA0 /* [CP] Check Pods Manifest.lock */,
 				D49E1ACF281FD0D3004EE08F /* Sources */,
 				D49E1AD0281FD0D3004EE08F /* Frameworks */,
 				D49E1AD1281FD0D3004EE08F /* Resources */,
+				3B9652983090D9E89DAF65D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,16 +162,60 @@
 				D49E1AE6281FD0D5004EE08F /* LaunchScreen.storyboard in Resources */,
 				D49E1AE3281FD0D5004EE08F /* Assets.xcassets in Resources */,
 				D49E1ADE281FD0D3004EE08F /* Main.storyboard in Resources */,
+				C4333158282D412400B85424 /* CalendarView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B9652983090D9E89DAF65D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PerfectDay/Pods-PerfectDay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PerfectDay/Pods-PerfectDay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PerfectDay/Pods-PerfectDay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		558B53966E653725E91D7AA0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PerfectDay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D49E1ACF281FD0D3004EE08F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C433315C282D42CB00B85424 /* CalendarVC.swift in Sources */,
 				D49E1ADB281FD0D3004EE08F /* ViewController.swift in Sources */,
 				D49E1AD7281FD0D3004EE08F /* AppDelegate.swift in Sources */,
 				D49E1AE1281FD0D3004EE08F /* PerfectDay.xcdatamodeld in Sources */,
@@ -287,6 +363,7 @@
 		};
 		D49E1AEB281FD0D5004EE08F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2314E0A08293A8BA01C4B8B /* Pods-PerfectDay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -305,6 +382,7 @@
 		};
 		D49E1AEC281FD0D5004EE08F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01AA816EBB8B49FEDF5A474D /* Pods-PerfectDay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
