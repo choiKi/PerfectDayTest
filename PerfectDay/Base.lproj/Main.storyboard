@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--계획 설정-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PerfectDay" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5D-i3-rJw" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="44" width="414" height="369"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="325"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fbN-Lw-qde">
@@ -38,6 +38,9 @@
                                                 <rect key="frame" x="257" y="0.0" width="157" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                                                <connections>
+                                                    <action selector="addBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jyc-Lu-tz3"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -71,15 +74,16 @@
                             <constraint firstItem="fbN-Lw-qde" firstAttribute="top" secondItem="t5D-i3-rJw" secondAttribute="bottom" id="zzH-CX-0lh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="계획 설정" image="calendar" catalog="system" id="zKs-mq-Qj9"/>
+                    <navigationItem key="navigationItem" id="Dgu-UA-w94"/>
                     <connections>
                         <outlet property="calendar" destination="t5D-i3-rJw" id="Hv5-2X-VUH"/>
+                        <outlet property="tableView" destination="YZS-pf-dvG" id="8z7-Fl-4r3"/>
                         <outlet property="todayLabel" destination="P1g-iY-suG" id="cRw-Od-97p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="934.78260869565224" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1844.9275362318842" y="137.94642857142856"/>
         </scene>
         <!--내 기록-->
         <scene sceneID="YNe-az-IFR">
@@ -100,14 +104,57 @@
         <!--오늘의 계획-->
         <scene sceneID="n1d-5d-X0k">
             <objects>
-                <viewController id="hNE-Hi-x1r" sceneMemberID="viewController">
+                <viewController id="hNE-Hi-x1r" customClass="TodayViewController" customModule="PerfectDay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SNL-oI-j97">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9mP-CG-iXb">
+                                <rect key="frame" x="10" y="94" width="394" height="719"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfect Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndu-nJ-BxW">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4v-hV-cye">
+                                        <rect key="frame" x="0.0" y="68" width="394" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="De6-7e-FPE">
+                                        <rect key="frame" x="0.0" y="118" width="394" height="601"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="RjF-q2-3Lv">
+                                                <rect key="frame" x="0.0" y="44.5" width="394" height="43.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RjF-q2-3Lv" id="BG7-03-P65">
+                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4Tv-i1-K3S"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Tv-i1-K3S" firstAttribute="trailing" secondItem="9mP-CG-iXb" secondAttribute="trailing" constant="10" id="8Be-rv-yNs"/>
+                            <constraint firstItem="9mP-CG-iXb" firstAttribute="leading" secondItem="4Tv-i1-K3S" secondAttribute="leading" constant="10" id="8Pk-Im-6U2"/>
+                            <constraint firstItem="4Tv-i1-K3S" firstAttribute="bottom" secondItem="9mP-CG-iXb" secondAttribute="bottom" id="VCL-Fl-aM8"/>
+                            <constraint firstItem="9mP-CG-iXb" firstAttribute="top" secondItem="4Tv-i1-K3S" secondAttribute="top" constant="50" id="tXX-kI-sRo"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="오늘의 계획" image="timer" catalog="system" id="l8X-Kg-0UB"/>
+                    <connections>
+                        <outlet property="tableView" destination="De6-7e-FPE" id="EPV-yB-gzh"/>
+                        <outlet property="todayLabel" destination="I4v-hV-cye" id="oP2-CG-3pO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XcK-S4-r98" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,7 +171,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="BgD-6M-msZ"/>
+                        <segue destination="vE6-bW-N2t" kind="relationship" relationship="viewControllers" id="BgD-6M-msZ"/>
                         <segue destination="hNE-Hi-x1r" kind="relationship" relationship="viewControllers" id="t4G-Wi-Z5P"/>
                         <segue destination="dFi-Wm-ll9" kind="relationship" relationship="viewControllers" id="s8X-1F-19J"/>
                     </connections>
@@ -132,6 +179,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k4L-p5-Upj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.637681159420293" y="137.94642857142856"/>
+        </scene>
+        <!--계획 설정-->
+        <scene sceneID="ZNl-vw-qE9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vE6-bW-N2t" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="계획 설정" image="calendar" catalog="system" id="zKs-mq-Qj9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bsg-n8-N3C">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xWp-mb-F9Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o5F-Iv-mH8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934.78260869565224" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>

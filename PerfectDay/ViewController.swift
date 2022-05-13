@@ -13,6 +13,7 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
     // MARK:- OUtlet
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var todayLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     //MARK:- Property
     let dateFormatter = DateFormatter()
@@ -24,17 +25,37 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
         
         calendar.delegate = self
         calendar.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         
         calendarSetting()
         daySetting()
         
+        tableView.reloadData()
 
     }
     
+    @IBAction func addBtnPress(_ sender: UIButton) {
+        let addVC = UIStoryboard(name: "AddView", bundle: nil).instantiateViewController(withIdentifier: "AddViewController") as! AddViewController
+        
+        navigationController?.pushViewController(addVC, animated: true)
+    }
     
-
     
  
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
 }
 
 extension ViewController {
@@ -64,7 +85,5 @@ extension ViewController {
         todayLabel.text = dateFormatter.string(from: date)
      }
 
-
-    
 }
 
