@@ -14,13 +14,25 @@ class EditViewController: UIViewController {
     
     let datePicker = UIDatePicker()
     
+    var paramTitle : String?
+    var paramTime : Int32?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        scheduleTextField.text = paramTitle
     }
     
+    @IBAction func pressEdit(_ sender: UIButton) {
+        
+        editList()
+        navigationController?.popViewController(animated: true)
+        
+    }
 
-
+    func editList() {
+        
+    }
 
 }

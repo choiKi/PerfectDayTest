@@ -57,7 +57,7 @@ class AddViewController: UIViewController {
         catch {
             
         }
-        vc.reloadData()
+        vc.reloadTable()
         vc.tableView?.reloadData()
     }
      

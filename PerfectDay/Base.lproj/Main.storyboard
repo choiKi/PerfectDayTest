@@ -49,52 +49,41 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" restorationIdentifier="scListCell" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="scListCell" id="hGN-p0-QQe" customClass="ScheduleTableViewCell" customModule="PerfectDay" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="44.5" width="414" height="55"/>
+                                                <rect key="frame" x="0.0" y="44.5" width="414" height="51"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hGN-p0-QQe" id="oTF-6v-XcH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="1w1-Us-euY">
-                                                            <rect key="frame" x="20" y="0.0" width="374" height="55"/>
+                                                            <rect key="frame" x="30" y="15" width="354" height="21"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LmG-OR-d14">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="39" height="55"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdP-gp-vMq">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="39" height="24.5"/>
-                                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysz-Zr-BSM">
-                                                                            <rect key="frame" x="0.0" y="34.5" width="39" height="20.5"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="height" constant="20.5" id="m5h-5w-oeW"/>
-                                                                            </constraints>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1E-IL-tar">
-                                                                    <rect key="frame" x="325.5" y="0.0" width="48.5" height="55"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain" title="수정"/>
-                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdP-gp-vMq">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="39" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysz-Zr-BSM">
+                                                                    <rect key="frame" x="320" y="0.0" width="34" height="21"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20.5" id="m5h-5w-oeW"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="1w1-Us-euY" firstAttribute="leading" secondItem="oTF-6v-XcH" secondAttribute="leading" constant="20" id="3uF-9T-Zwj"/>
-                                                        <constraint firstAttribute="trailing" secondItem="1w1-Us-euY" secondAttribute="trailing" constant="20" id="k4z-xV-Iq6"/>
-                                                        <constraint firstAttribute="bottom" secondItem="1w1-Us-euY" secondAttribute="bottom" id="tdI-sR-zhz"/>
-                                                        <constraint firstItem="1w1-Us-euY" firstAttribute="top" secondItem="oTF-6v-XcH" secondAttribute="top" id="vh2-HG-tLB"/>
+                                                        <constraint firstItem="1w1-Us-euY" firstAttribute="leading" secondItem="oTF-6v-XcH" secondAttribute="leading" constant="30" id="3uF-9T-Zwj"/>
+                                                        <constraint firstItem="1w1-Us-euY" firstAttribute="top" secondItem="oTF-6v-XcH" secondAttribute="top" constant="15" id="5fh-OD-VBG"/>
+                                                        <constraint firstAttribute="bottom" secondItem="1w1-Us-euY" secondAttribute="bottom" constant="15" id="Bwq-8m-nLR"/>
+                                                        <constraint firstAttribute="trailing" secondItem="1w1-Us-euY" secondAttribute="trailing" constant="30" id="k4z-xV-Iq6"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="editBtn" destination="r1E-IL-tar" id="cxh-Te-Zae"/>
                                                     <outlet property="time" destination="Ysz-Zr-BSM" id="Sfu-w3-vwt"/>
                                                     <outlet property="title" destination="MdP-gp-vMq" id="wKj-SW-JRI"/>
                                                 </connections>

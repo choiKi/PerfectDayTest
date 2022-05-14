@@ -27,35 +27,31 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m5w-NL-egs">
-                                        <rect key="frame" x="0.0" y="40" width="394" height="182"/>
+                                        <rect key="frame" x="0.0" y="40" width="394" height="223"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktd-HH-GwC">
-                                        <rect key="frame" x="0.0" y="232" width="394" height="30"/>
+                                        <rect key="frame" x="0.0" y="273" width="394" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="grO-u0-bEx">
-                                        <rect key="frame" x="0.0" y="272" width="394" height="216"/>
+                                        <rect key="frame" x="0.0" y="313" width="394" height="216"/>
                                         <locale key="locale" localeIdentifier="ko"/>
                                     </datePicker>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OI7-1w-g1e">
-                                        <rect key="frame" x="0.0" y="498" width="394" height="198"/>
+                                        <rect key="frame" x="0.0" y="539" width="394" height="198"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5a-d5-cb7">
-                                        <rect key="frame" x="0.0" y="706" width="394" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="trash.fill" catalog="system" imagePadding="10">
-                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
-                                        </buttonConfiguration>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tj4-T4-deg">
                                         <rect key="frame" x="0.0" y="747" width="394" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="수 정"/>
+                                        <connections>
+                                            <action selector="pressEdit:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="K4Z-hZ-0J0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -80,12 +76,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="trash.fill" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

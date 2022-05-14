@@ -37,7 +37,7 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
         calendarSetting()
         daySetting()
         
-        reloadData()
+        reloadTable()
 
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -50,7 +50,7 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
         navigationController?.pushViewController(addVC, animated: true)
     }
     
-    func reloadData() {
+    func reloadTable() {
         do {
             self.scList =  try! context.fetch(ScheduleByDate.fetchRequest())
             DispatchQueue.main.async {
@@ -81,6 +81,37 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandler) in
+            
+            let scheduleToRemove = self.scList![indexPath.row]
+            
+            self.context.delete(scheduleToRemove)
+            
+            do {
+                try self.context.save()
+            }
+            catch {
+                
+            }
+            self.reloadTable()
+        }
+        return UISwipeActionsConfiguration(actions: [action])
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let sc = self.scList?[indexPath.row]
+        
+        let editVC = UIStoryboard(name: "EditView", bundle: nil).instantiateViewController(withIdentifier: "EditViewController") as! EditViewController
+        
+        editVC.paramTitle = scList?[indexPath.row].title
+        editVC.paramTime = scList?[indexPath.row].time
+        
+        self.navigationController?.pushViewController(editVC, animated: true)
     }
     
     
