@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		824B5FF5EFB80BCFE241117B /* Pods_PerfectDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37BDEB1325EA14C237C54CB4 /* Pods_PerfectDay.framework */; };
+		C4A422D0282F97EF00F8FC3E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4A422AE282F569A00F8FC3E /* Model.xcdatamodeld */; };
+		C4A422D7282F987300F8FC3E /* Schedule+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A422D3282F987300F8FC3E /* Schedule+CoreDataClass.swift */; };
+		C4A422D8282F987300F8FC3E /* Schedule+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A422D4282F987300F8FC3E /* Schedule+CoreDataProperties.swift */; };
+		C4A422DA282F997900F8FC3E /* ScheduleByDate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A422D9282F997900F8FC3E /* ScheduleByDate+CoreDataClass.swift */; };
+		C4A422DC282F997D00F8FC3E /* ScheduleByDate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A422DB282F997D00F8FC3E /* ScheduleByDate+CoreDataProperties.swift */; };
 		C4BD45A5282EA7A100075668 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD45A4282EA7A100075668 /* TodayViewController.swift */; };
 		C4BD45A7282EB66300075668 /* AddView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BD45A6282EB66300075668 /* AddView.storyboard */; };
 		C4BD45A9282EB6A700075668 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD45A8282EB6A700075668 /* AddViewController.swift */; };
 		C4BD45AB282ECB8D00075668 /* EditView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BD45AA282ECB8D00075668 /* EditView.storyboard */; };
 		C4BD45AD282ECBA100075668 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD45AC282ECBA100075668 /* EditViewController.swift */; };
 		C4BD45B2282ECED100075668 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD45B1282ECED100075668 /* ScheduleTableViewCell.swift */; };
+		C4CB9433282FA19A009DDE79 /* History+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CB9432282FA19A009DDE79 /* History+CoreDataClass.swift */; };
+		C4CB9436282FAC44009DDE79 /* ScheduleByDate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CB9435282FAC44009DDE79 /* ScheduleByDate+CoreDataProperties.swift */; };
 		D49E1AD7281FD0D3004EE08F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E1AD6281FD0D3004EE08F /* AppDelegate.swift */; };
 		D49E1AD9281FD0D3004EE08F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E1AD8281FD0D3004EE08F /* SceneDelegate.swift */; };
 		D49E1ADB281FD0D3004EE08F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E1ADA281FD0D3004EE08F /* ViewController.swift */; };
@@ -27,12 +34,20 @@
 		01AA816EBB8B49FEDF5A474D /* Pods-PerfectDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerfectDay.release.xcconfig"; path = "Target Support Files/Pods-PerfectDay/Pods-PerfectDay.release.xcconfig"; sourceTree = "<group>"; };
 		37BDEB1325EA14C237C54CB4 /* Pods_PerfectDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PerfectDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2314E0A08293A8BA01C4B8B /* Pods-PerfectDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerfectDay.debug.xcconfig"; path = "Target Support Files/Pods-PerfectDay/Pods-PerfectDay.debug.xcconfig"; sourceTree = "<group>"; };
+		C4A422AF282F569A00F8FC3E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		C4A422D3282F987300F8FC3E /* Schedule+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Schedule+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		C4A422D4282F987300F8FC3E /* Schedule+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Schedule+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		C4A422D9282F997900F8FC3E /* ScheduleByDate+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ScheduleByDate+CoreDataClass.swift"; path = "../../ScheduleByDate+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C4A422DB282F997D00F8FC3E /* ScheduleByDate+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ScheduleByDate+CoreDataProperties.swift"; path = "../../ScheduleByDate+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C4BD45A4282EA7A100075668 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		C4BD45A6282EB66300075668 /* AddView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddView.storyboard; sourceTree = "<group>"; };
 		C4BD45A8282EB6A700075668 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		C4BD45AA282ECB8D00075668 /* EditView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditView.storyboard; sourceTree = "<group>"; };
 		C4BD45AC282ECBA100075668 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		C4BD45B1282ECED100075668 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		C4CB9432282FA19A009DDE79 /* History+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "History+CoreDataClass.swift"; path = "../../History+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C4CB9434282FA4C2009DDE79 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
+		C4CB9435282FAC44009DDE79 /* ScheduleByDate+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ScheduleByDate+CoreDataProperties.swift"; path = "../../ScheduleByDate+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D49E1AD3281FD0D3004EE08F /* PerfectDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49E1AD6281FD0D3004EE08F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D49E1AD8281FD0D3004EE08F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +88,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C4A422B1282F5F3700F8FC3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4CB9435282FAC44009DDE79 /* ScheduleByDate+CoreDataProperties.swift */,
+				C4CB9432282FA19A009DDE79 /* History+CoreDataClass.swift */,
+				C4A422DB282F997D00F8FC3E /* ScheduleByDate+CoreDataProperties.swift */,
+				C4A422D9282F997900F8FC3E /* ScheduleByDate+CoreDataClass.swift */,
+				C4A422D3282F987300F8FC3E /* Schedule+CoreDataClass.swift */,
+				C4A422D4282F987300F8FC3E /* Schedule+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C4BD45B0282ECE4500075668 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,10 +131,12 @@
 		D49E1AD5281FD0D3004EE08F /* PerfectDay */ = {
 			isa = PBXGroup;
 			children = (
+				C4A422B1282F5F3700F8FC3E /* Model */,
 				C4BD45B0282ECE4500075668 /* StoryBoard */,
 				D49E1AD6281FD0D3004EE08F /* AppDelegate.swift */,
 				D49E1AD8281FD0D3004EE08F /* SceneDelegate.swift */,
 				D49E1ADA281FD0D3004EE08F /* ViewController.swift */,
+				C4A422AE282F569A00F8FC3E /* Model.xcdatamodeld */,
 				D49E1ADC281FD0D3004EE08F /* Main.storyboard */,
 				D49E1AE2281FD0D5004EE08F /* Assets.xcassets */,
 				D49E1AE4281FD0D5004EE08F /* LaunchScreen.storyboard */,
@@ -237,10 +267,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4BD45AD282ECBA100075668 /* EditViewController.swift in Sources */,
+				C4A422D8282F987300F8FC3E /* Schedule+CoreDataProperties.swift in Sources */,
+				C4A422D0282F97EF00F8FC3E /* Model.xcdatamodeld in Sources */,
+				C4A422D7282F987300F8FC3E /* Schedule+CoreDataClass.swift in Sources */,
 				D49E1ADB281FD0D3004EE08F /* ViewController.swift in Sources */,
 				C4BD45A9282EB6A700075668 /* AddViewController.swift in Sources */,
+				C4CB9433282FA19A009DDE79 /* History+CoreDataClass.swift in Sources */,
 				C4BD45A5282EA7A100075668 /* TodayViewController.swift in Sources */,
+				C4A422DA282F997900F8FC3E /* ScheduleByDate+CoreDataClass.swift in Sources */,
 				D49E1AD7281FD0D3004EE08F /* AppDelegate.swift in Sources */,
+				C4A422DC282F997D00F8FC3E /* ScheduleByDate+CoreDataProperties.swift in Sources */,
+				C4CB9436282FAC44009DDE79 /* ScheduleByDate+CoreDataProperties.swift in Sources */,
 				D49E1AE1281FD0D3004EE08F /* PerfectDay.xcdatamodeld in Sources */,
 				C4BD45B2282ECED100075668 /* ScheduleTableViewCell.swift in Sources */,
 				D49E1AD9281FD0D3004EE08F /* SceneDelegate.swift in Sources */,
@@ -392,6 +429,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DU88KW67TH;
 				INFOPLIST_FILE = PerfectDay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -411,6 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DU88KW67TH;
 				INFOPLIST_FILE = PerfectDay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -447,6 +486,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		C4A422AE282F569A00F8FC3E /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C4CB9434282FA4C2009DDE79 /* Model 2.xcdatamodel */,
+				C4A422AF282F569A00F8FC3E /* Model.xcdatamodel */,
+			);
+			currentVersion = C4CB9434282FA4C2009DDE79 /* Model 2.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		D49E1ADF281FD0D3004EE08F /* PerfectDay.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

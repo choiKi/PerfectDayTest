@@ -7,6 +7,7 @@
 
 import UIKit
 import FSCalendar
+import CoreData
 
 class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
 
@@ -18,6 +19,10 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
     //MARK:- Property
     let dateFormatter = DateFormatter()
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    
+    var scList : [ScheduleByDate]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,27 +37,50 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
         calendarSetting()
         daySetting()
         
-        tableView.reloadData()
+        reloadData()
 
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
+        
     @IBAction func addBtnPress(_ sender: UIButton) {
         let addVC = UIStoryboard(name: "AddView", bundle: nil).instantiateViewController(withIdentifier: "AddViewController") as! AddViewController
         
         navigationController?.pushViewController(addVC, animated: true)
     }
     
-    
+    func reloadData() {
+        do {
+            self.scList =  try! context.fetch(ScheduleByDate.fetchRequest())
+            DispatchQueue.main.async {
+                self.tableView?.reloadData()
+            }
+            
+        } catch {
+            
+        }
+        
+    }
  
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return self.scList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "scListCell", for: indexPath) as! ScheduleTableViewCell
+        
+        
+        let sc = self.scList?[indexPath.row]
+        
+        cell.title.text = sc?.title
+        cell.time?.text = sc?.timeString
+        
+        return cell
+        
     }
     
     
@@ -70,6 +98,7 @@ extension ViewController {
         calendar.appearance.titleWeekendColor = .red
         calendar.appearance.headerDateFormat = "YYYY년  M월"
         
+        
     }
     
     func daySetting() {
@@ -82,7 +111,7 @@ extension ViewController {
     public func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
          let dateFormatter = DateFormatter()
          dateFormatter.dateFormat = "YY년 M월 d일"
-        todayLabel.text = dateFormatter.string(from: date)
+         todayLabel.text = dateFormatter.string(from: date)
      }
 
 }

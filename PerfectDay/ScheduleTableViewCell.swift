@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import CoreData
 
 class ScheduleTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var editBtn: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
